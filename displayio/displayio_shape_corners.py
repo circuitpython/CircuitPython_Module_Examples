@@ -1,9 +1,9 @@
-import board
-import displayio
-
 """
 Illustrate usage of displayio.Shape with boundary and mirror.
 """
+
+import board
+import displayio
 
 SHAPE_WIDTH = board.DISPLAY.width
 SHAPE_HEIGHT = board.DISPLAY.height

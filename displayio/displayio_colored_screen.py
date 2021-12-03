@@ -1,3 +1,5 @@
+"""Use a bitmap to change the display background."""
+
 import board
 import displayio
 

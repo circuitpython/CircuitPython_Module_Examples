@@ -1,5 +1,8 @@
-import board
+"""
+Illustrate usage of displayio.Shape.
+"""
 
+import board
 import displayio
 
 SHAPE_WIDTH = 100
