@@ -1,5 +1,6 @@
 import board
 import displayio
+
 """
 Illustrate usage of displayio.Shape with boundary and mirror.
 """
@@ -15,7 +16,7 @@ palette = displayio.Palette(2)
 
 # set corner pixels out of bounds
 for i in range(CORNER_SIZE):
-    shape.set_boundary(i, CORNER_SIZE-1-i, SHAPE_WIDTH//2-1)
+    shape.set_boundary(i, CORNER_SIZE - 1 - i, SHAPE_WIDTH // 2 - 1)
 
 palette[0] = 0x0000FF  # out of bounds color
 palette[1] = 0x00FFFF  # shape color
