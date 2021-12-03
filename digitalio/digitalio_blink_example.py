@@ -1,7 +1,7 @@
 """CircuitPython LED blink example"""
 import time
 import board
-from digitalio import DigitalInOut, Direction, Pull
+from digitalio import DigitalInOut, Direction
 
 # LED setup.
 led = DigitalInOut(board.LED)
