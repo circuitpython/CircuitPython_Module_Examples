@@ -5,23 +5,25 @@
 Use bitmaptools.rotozoom() to rotate a bmp image in a circle animated.
 """
 import math
-import bitmaptools
 import board
-import displayio
 import adafruit_imageload
+import bitmaptools
+import displayio
 
 # use the builtin display
 display = board.DISPLAY
 
 # load bmp image into a Bitmap and Palette objects
-source_bitmap, source_palette = adafruit_imageload.load("Billie.bmp",
-                                                        bitmap=displayio.Bitmap,
-                                                        palette=displayio.Palette)
+source_bitmap, source_palette = adafruit_imageload.load(
+    "Billie.bmp", bitmap=displayio.Bitmap, palette=displayio.Palette
+)
 # Create a TileGrid to show the bitmap
 source_tile_grid = displayio.TileGrid(source_bitmap, pixel_shader=source_palette)
 
 # Create destination Bitmap object to hold the rotated image
-dest_bitmap = displayio.Bitmap(source_bitmap.height, source_bitmap.height, len(source_palette))
+dest_bitmap = displayio.Bitmap(
+    source_bitmap.height, source_bitmap.height, len(source_palette)
+)
 
 # Create a TileGrid to show the destination Bitmap with the rotated image in it
 dest_tile_grid = displayio.TileGrid(dest_bitmap, pixel_shader=source_palette)
